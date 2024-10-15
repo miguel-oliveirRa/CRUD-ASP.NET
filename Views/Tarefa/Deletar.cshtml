@@ -1,0 +1,47 @@
+@model Models.Tarefa
+
+@{
+    ViewData["Title"] = "Deletar Tarefa";
+}
+
+<h1 class="text-2xl text-red-600 p-3">Você tem certeza que deseja deletar a Tarefa?</h1>
+
+<hr>
+
+
+<div class="w-full">
+    <dl class="flex flex-col content-center max-w-max">
+        <dt class="flex text-xl p-3 font-normal border-b-2 border-solid border-slate-400">
+            <span class="font-medium">@Html.DisplayNameFor(model => model.Titulo)</span>
+            <span class="w-6 text-center font-bold">-</span>
+            @Html.DisplayFor(model => model.Titulo)
+        </dt>
+        <dt class="flex text-xl p-3 font-normal border-b-2 border-solid border-slate-400">
+            <span class="font-medium">@Html.DisplayNameFor(model => model.Descricao)</span>
+            <span class="w-6 text-center font-bold">-</span>
+            @Html.DisplayFor(model => model.Descricao)
+        </dt> 
+        <dt class="flex text-xl p-3 font-normal border-b-2 border-solid border-slate-400">
+            <span class="font-medium">@Html.DisplayNameFor(model => model.Data)</span>
+            <span class="w-6 text-center font-bold">-</span>
+            @Html.DisplayFor(model => model.DataFormatada)
+        </dt> 
+        <dt class="flex text-xl p-3 font-normal border-b-2 border-solid border-slate-400">
+            <span class="font-medium">@Html.DisplayNameFor(model => model.Status)</span>
+            <span class="w-6 text-center font-bold">-</span>
+            <span class="py-[1px]">@Html.DisplayFor(model => model.Status)</span>
+        </dt>
+    </dl>
+</div>
+
+<div class="flex flex-row w-3/5 px-2 py-6">
+       <form asp-action="Deletar" asp-controller="Tarefa" class="flex flex-col gap-5">
+            <div class="flex">
+                <input type="submit" value="Deletar" class="w-44 p-1 text-lg font-medium rounded-lg  border border-solid border-red-600 hover:border-red-800 hover:bg-red-100 cursor-pointer focus:outline-none focus:bg-red-200"/>
+            </div>
+        </form>
+</div>
+<hr>
+<div class="text-xl p-2 w-96">
+    <a asp-action="Index" class="block text-center w-[60%] p-[6px] text-zinc-100 bg-violet-900 rounded-lg border-transparent hover:bg-violet-600 hover:text-white focus:outline-none">Voltar</a>
+</div>

@@ -1,0 +1,67 @@
+@model IEnumerable<Models.Tarefa>
+
+@{
+    ViewData["Title"] = "ObterPorStatus";
+}
+
+<div class="flex gap-2 items-center content-center p-3">
+    <h2 class="text-3xl">Tarefa</h2>
+
+    <div class="flex content-center justify-end gap-2 w-full text-xl p-2">
+        <p class="text-center p-2 text-zinc-100 bg-violet-900 rounded-2xl border-transparent hover:bg-violet-600 hover:text-white focus:outline-none focus:text-blue-800">
+            <a asp-action="Criar"  asp-controller="Tarefa" >Nova Tarefa</a>
+        </p>
+    </div>
+</div>
+
+<div class="flex content-center justify-center w-full">
+    <table class="w-full divide-y divide-black">
+          <thead>
+            <tr>
+              <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">
+                    @Html.DisplayNameFor(model => model.Titulo)
+              </th>
+              <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">
+                    @Html.DisplayNameFor(model => model.Descricao)
+              </th>
+              <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">
+                    @Html.DisplayNameFor(model => model.Data)
+              </th>
+              <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">
+                    @Html.DisplayNameFor(model => model.Status)
+              </th>
+              <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase">
+                    Funções
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200 dark:divide-neutral-700">
+            @foreach(var items in Model)
+            {
+                <tr>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-black ">
+                        @Html.DisplayFor(model => items.Titulo)
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-black ">
+                        @Html.DisplayFor(model => items.Descricao)
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-black ">
+                        @Html.DisplayFor(model => items.DataFormatada)
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-black ">
+                        @Html.DisplayFor(model => items.Status)
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-center text-sm font-medium">
+                        <a asp-action="Editar" asp-controller="Tarefa" asp-route-id="@items.Id" class="text-sm font-medium p-1 rounded-lg text-black hover:bg-zinc-300">Editar</a> 
+                            |
+                        <a asp-action="Deletar" asp-controller="Tarefa" asp-route-id="@items.Id" class="text-sm font-medium p-1 rounded-lg text-black hover:bg-zinc-300">Deletar</a>
+                    </td>
+                </tr>
+            }
+          </tbody>
+        </table>
+</div>
+<br>
+<div class="text-xl p-2 w-96">
+    <a asp-action="Index" class="block text-center w-[60%] p-[6px] text-zinc-100 bg-violet-900 rounded-lg border-transparent hover:bg-violet-600 hover:text-white focus:outline-none">Voltar</a>
+</div>

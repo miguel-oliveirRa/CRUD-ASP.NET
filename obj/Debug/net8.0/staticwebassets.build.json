@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "Hash": "nRsyjwWc822kglhOYDvDc8n0v0qM8Q3skUOf4fixhq8=",
+  "Source": "CRUD-ASP.NET",
+  "BasePath": "_content/CRUD-ASP.NET",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "CRUD-ASP.NET\\wwwroot",
+      "Source": "CRUD-ASP.NET",
+      "ContentRoot": "C:\\Users\\Miguel\\CRUD-ASP.NET\\wwwroot\\",
+      "BasePath": "_content/CRUD-ASP.NET",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Miguel\\CRUD-ASP.NET\\wwwroot\\css\\input.css",
+      "SourceId": "CRUD-ASP.NET",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Miguel\\CRUD-ASP.NET\\wwwroot\\",
+      "BasePath": "_content/CRUD-ASP.NET",
+      "RelativePath": "css/input.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\input.css"
+    },
+    {
+      "Identity": "C:\\Users\\Miguel\\CRUD-ASP.NET\\wwwroot\\css\\styles.css",
+      "SourceId": "CRUD-ASP.NET",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Miguel\\CRUD-ASP.NET\\wwwroot\\",
+      "BasePath": "_content/CRUD-ASP.NET",
+      "RelativePath": "css/styles.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\styles.css"
+    }
+  ]
+}

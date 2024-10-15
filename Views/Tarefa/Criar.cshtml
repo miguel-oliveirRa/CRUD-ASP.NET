@@ -1,0 +1,37 @@
+@model Models.Tarefa
+
+@{
+    ViewData["Title"] = "Criar nova Tarefa";
+}
+
+<h1 class="text-2xl p-3">Criar nova Tarefa</h1>
+
+<hr>
+
+<div class="flex flex-row w-3/5">
+    <div class="flex flex-col p-4 text-xl w-full">
+        <form asp-action="Criar" asp-controller="Tarefa" class="flex flex-col gap-5">
+            <div class="flex flex-col">
+                <label asp-for="Titulo">Título:</label>
+                <input asp-for="Titulo" class="border border-solid border-slate-700 rounded-xl text-sm p-2 w-96" required/>
+            </div>
+            <div class="flex flex-col">
+                <label asp-for="Descricao">Descrição:</label>
+                <input asp-for="Descricao" class="border border-solid border-slate-700 rounded-xl text-sm p-2 w-96 " required placeholder="Breve Descrição da Tarefa"/>
+            </div>
+            <div class="flex">
+                <label class="flex p-3 w-32 bg-white border border-gray-500 rounded-lg text-sm cursor-pointer focus:border-blue-500 focus:ring-blue-500 ">
+                    <input type="checkbox" class=" w-4 shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
+                    <span class="text-base ms-3 font-medium ">Status</span>
+                </label>
+            </div>
+            <div class="flex">
+                <input type="submit" value="Criar" class="w-32 p-1 text-lg font-medium rounded-lg  border border-solid border-violet-700 hover:border-violet-800 hover:bg-purple-100 cursor-pointer focus:outline-none focus:bg-purple-200"/>
+            </div>
+        </form>
+    </div>
+</div>
+<hr>
+<div class="text-xl p-2 w-96">
+    <a asp-action="Index" class="block text-center w-[60%] p-[6px] text-zinc-100 bg-violet-900 rounded-lg border-transparent hover:bg-violet-600 hover:text-white focus:outline-none">Voltar</a>
+</div>

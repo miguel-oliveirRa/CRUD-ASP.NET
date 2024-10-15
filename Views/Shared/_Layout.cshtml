@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Tarefas</title>
+    <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="h-16 content-center w-full">
+        <div class="flex flex-row justify-start w-full gap-2 p-4">
+            <nav class="flex content-between text-xl p-1 w-full">
+                <a class="w-20 text-center hover:underline" asp-action="Index">Home</a>
+                <a class="w-20 text-center hover:underline" asp-action="Index" asp-controller="Tarefa">Tarefas</a>
+            </nav>
+        </div>
+    </header>
+
+    <hr>
+    
+        <main class="flex flex-col gap-2 h-full w-full">
+            @RenderBody()
+        </main>
+</body>
+</html>
